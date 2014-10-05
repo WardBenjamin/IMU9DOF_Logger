@@ -1,5 +1,3 @@
-#include <DS1307RTC.h>
-#include <Time.h>
 #include <Wire.h>
 // I2C code to read the sensors
 
@@ -28,20 +26,6 @@ void setup()
 
 void loop()
 {
-  tmElements_t tm;
-  RTC.read(tm);
-  Serial.print(tm.Day);
-  Serial.print("/");
-  Serial.print(tm.Month);
-  Serial.print("/");
-  Serial.print(tmYearToCalendar(tm.Year));
-  Serial.print(" ");
-  Serial.print(tm.Hour);
-  Serial.print(":");
-  Serial.print(tm.Minute);
-  Serial.print(":");
-  Serial.print(tm.Second);
-  Serial.print(",");
   Serial.print(Read_Accel());
   Serial.print(",");
   Serial.print(Read_Magn());
